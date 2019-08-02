@@ -2,6 +2,12 @@ import time
 import pandas as pd
 import numpy as np
 
+
+
+ # these are the cities and corresponding city data files 
+ # processed by this program
+  
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' } 
@@ -322,7 +328,9 @@ def display_rows(df):
         Returns:
             none
                     
-           Module displays 5 rows at a time per continued user request  
+           Module displays 5 rows at a time per continued user request
+           
+           This allows the user to scroll through raw data
            
            """
     sub1 = 0
@@ -390,7 +398,7 @@ def main():
         user_stats(df, city)
         
         # display rows of data, 5 rows at a time if the user wants
-        # to see it
+        # to see 'raw' data
         scroll = input('\nWould you like to view rows (5 at a time)?  Enter yes or no.\n')
         if scroll.lower() == 'yes':
             print('Here are the first five rows of data:')
