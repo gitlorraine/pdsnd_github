@@ -12,6 +12,9 @@ Chicago bikeshare data          Chicago.csv
 New York City bikeshare data    new_york_city.csv
 Washington bikeshare data       washington.csv
 
+These files are large and are not uploaded as
+part of the project files.    
+
 
 ### Credits
 This project was created for an Udacity course.  The files and outline of functionality were provided.
