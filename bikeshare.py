@@ -54,10 +54,10 @@ def get_filters():
     while month_filter_is_not_validated:
         input_filter_month_Y_N = (input("Would you like to filter data by month, Yes or No:"))
         lower_filter_month_Y_N = input_filter_month_Y_N.lower()
-        if lower_filter_month_Y_N == 'yes': 
+        if lower_filter_month_Y_N == 'yes' or 'y': 
             filter_by_month = True
             month_filter_is_not_validated = False
-        elif lower_filter_month_Y_N == 'no': 
+        elif lower_filter_month_Y_N == 'no' or 'n': 
             filter_by_month = False
             month_filter_is_not_validated = False
         else:
@@ -90,10 +90,10 @@ def get_filters():
     while day_filter_is_not_validated:
         input_filter_day_Y_N = (input("Would you like to filter data by day of the week, Yes or No:"))
         lower_filter_day_Y_N = input_filter_day_Y_N.lower()
-        if lower_filter_day_Y_N == 'yes': 
+        if lower_filter_day_Y_N == 'yes' or 'y': 
             filter_by_day = True
             day_filter_is_not_validated = False
-        elif lower_filter_day_Y_N == 'no': 
+        elif lower_filter_day_Y_N == 'no' or 'n': 
             filter_by_day = False
             day_filter_is_not_validated = False
         else:
@@ -392,14 +392,14 @@ def main():
         # display rows of data, 5 rows at a time if the user wants
         # to see it
         scroll = input('\nWould you like to view rows (5 at a time)?  Enter yes or no.\n')
-        if scroll.lower() == 'yes':
+        if scroll.lower() == 'yes' or 'y':
             print('Here are the first five rows of data:')
             display_rows(df)
               
         # allow the user to continue the program, enter another city, and get
         # additional statistics if they want to  
         restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        if restart.lower() != 'yes' or 'y':
              break
 
                 
