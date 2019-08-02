@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+August 1, 2019
 
 ### Project Title
-Replace the Project Title
+Bikeshare Data Analysis using Python
 
 ### Description
-Describe what your project is about and what it does
+Allow user to query usage data from a bikeshare system.  Files from three different cities are queried separately (the user has to query one file at a time).  Statistical information is calculated and returned to the user.   
 
 ### Files used
-Include the files used
+Chicago bikeshare data          Chicago.csv
+New York City bikeshare data    new_york_city.csv
+Washington bikeshare data       washington.csv
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+This project was created for an Udacity course.  The files and outline of functionality were provided.
