@@ -47,6 +47,21 @@ def get_filters():
         if lower_city in CITY_DATA:
             city = lower_city
             city_is_not_validated = False
+        elif lower_city == 'c':
+            city = 'chicago'
+            city_is_not_validated = False
+        elif lower_city == 'w':
+            city = 'washington'
+            city_is_not_validated = False 
+        elif lower_city == 'n':
+            city = 'new york city'
+            city_is_not_validated = False 
+        elif lower_city == 'ny':
+            city = 'new york city'
+            city_is_not_validated = False 
+        elif lower_city == 'n y':
+            city = 'new york city'
+            city_is_not_validated = False         
         else:
             city_is_not_validated = True
             print('The city you entered is not valid, please enter a valid city')
@@ -63,9 +78,15 @@ def get_filters():
         if lower_filter_month_Y_N == 'yes': 
             filter_by_month = True
             month_filter_is_not_validated = False
+        elif lower_filter_month_Y_N == 'y': 
+            filter_by_month = True
+            month_filter_is_not_validated = False    
         elif lower_filter_month_Y_N == 'no': 
             filter_by_month = False
             month_filter_is_not_validated = False
+        elif lower_filter_month_Y_N == 'n': 
+            filter_by_month = False
+            month_filter_is_not_validated = False    
         else:
             filter_by_month = False
             month_filter_is_not_validated = True
@@ -99,9 +120,15 @@ def get_filters():
         if lower_filter_day_Y_N == 'yes': 
             filter_by_day = True
             day_filter_is_not_validated = False
+        elif lower_filter_day_Y_N == 'y': 
+            filter_by_day = True
+            day_filter_is_not_validated = False    
         elif lower_filter_day_Y_N == 'no': 
             filter_by_day = False
             day_filter_is_not_validated = False
+        elif lower_filter_day_Y_N == 'n': 
+            filter_by_day = False
+            day_filter_is_not_validated = False    
         else:
             filter_by_day = False
             day_filter_is_not_validated = True
@@ -356,9 +383,9 @@ def display_rows(df):
               
             
         scroll_more = input('\nWould you like to continue scrolling (5 rows at a time)?  Enter yes or no:\n')
-        if scroll_more.lower() != 'yes':
-            scrolling = False
-        else:
+       
+        if scroll_more.lower() == 'yes':    
+            
             scrolling = True
             sub1 += 5
             sub2 += 5
@@ -367,6 +394,20 @@ def display_rows(df):
             sub5 += 5  
 
             print('Here are the next five rows of data:')
+            
+        elif scroll_more.lower() == 'y': 
+            scrolling = True
+            sub1 += 5
+            sub2 += 5
+            sub3 += 5
+            sub4 += 5
+            sub5 += 5  
+
+            print('Here are the next five rows of data:')
+        else:
+            
+            scrolling = False   
+            
     
     return 
 
@@ -403,12 +444,19 @@ def main():
         if scroll.lower() == 'yes':
             print('Here are the first five rows of data:')
             display_rows(df)
+        elif scroll.lower() == 'y':
+            print('Here are the first five rows of data:')
+            display_rows(df)
               
         # allow the user to continue the program, enter another city, and get
         # additional statistics if they want to  
         restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
-             break
+        if restart.lower() == 'yes':
+            continue
+        elif restart.lower() == 'y':
+            continue
+        else:
+            break
 
                 
 
