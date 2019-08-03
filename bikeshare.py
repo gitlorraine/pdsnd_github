@@ -41,6 +41,21 @@ def get_filters():
         if lower_city in CITY_DATA:
             city = lower_city
             city_is_not_validated = False
+        elif lower_city == 'c':
+            city = 'chicago'
+            city_is_not_validated = False
+        elif lower_city == 'w':
+            city = 'washington'
+            city_is_not_validated = False 
+        elif lower_city == 'n':
+            city = 'new york city'
+            city_is_not_validated = False 
+        elif lower_city == 'ny':
+            city = 'new york city'
+            city_is_not_validated = False 
+        elif lower_city == 'n y':
+            city = 'new york city'
+            city_is_not_validated = False         
         else:
             city_is_not_validated = True
             print('The city you entered is not valid, please enter a valid city')
